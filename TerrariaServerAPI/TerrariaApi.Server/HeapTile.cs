@@ -49,7 +49,7 @@
             }
         }
 
-        public override byte wall
+        public override ushort wall
         {
             get
             {
@@ -58,7 +58,7 @@
 
             set
             {
-                heap[offset + kHeapTileWallOffset] = value;
+                heap[offset + kHeapTileWallOffset] = (byte)value;
             }
         }
 
@@ -75,11 +75,11 @@
             }
         }
 
-        public override short sTileHeader
+        public override ushort sTileHeader
         {
             get
             {
-                return (short)((heap[offset + kHeapTileSTileHeaderOffset + 1] << 8) | heap[offset + kHeapTileSTileHeaderOffset]);
+                return (ushort)((heap[offset + kHeapTileSTileHeaderOffset + 1] << 8) | heap[offset + kHeapTileSTileHeaderOffset]);
             }
 
             set

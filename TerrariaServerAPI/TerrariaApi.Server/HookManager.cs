@@ -446,6 +446,11 @@ namespace TerrariaApi.Server
 						}
 						Netplay.Clients[buffer.whoAmI].ClientUUID = "";
 						return true;
+					case PacketTypes.SyncMod:
+						RemoteClient currentClient = Netplay.Clients[buffer.whoAmI];
+						string name = String.IsNullOrWhiteSpace(currentClient.Name) ? "Unknown" : currentClient.Name;
+						Console.WriteLine($"Sync mods for {name}({currentClient.Socket.GetRemoteAddress()})...");
+						return false;
 				}
 			}
 

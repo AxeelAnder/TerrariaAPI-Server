@@ -5,6 +5,10 @@ obj
 packages/
 
 .DS_Store
+.DS_Store
+.vs
+.vscode
+.idea
 
 Output/
 

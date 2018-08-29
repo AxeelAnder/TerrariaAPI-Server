@@ -15,7 +15,8 @@ namespace Mintaka.Modifications.Platform
 	{
 		public override IEnumerable<string> AssemblyTargets => new[]
 		{
-			"OTAPI, Version=1.3.5.3, Culture=neutral, PublicKeyToken=null"
+			"OTAPI, Version=1.3.5.3, Culture=neutral, PublicKeyToken=null",
+			"OTAPI, Version=1.3.5.1, Culture=neutral, PublicKeyToken=null"  // TML
 		};
 
 		public override string Description => "Enforcing OTAPI to load right platform...";
