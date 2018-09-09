@@ -124,6 +124,10 @@ public enum PacketTypes
 	PlayerDeathV2 = 118,
 	CreateCombatTextExtended = 119,
 
+	#region Extension Packets
+	SyncModPlayer = 200,
+	#endregion
+
 	#region tModLoader Packets
 	ModPacket = 250,
 	SyncMod = 251,

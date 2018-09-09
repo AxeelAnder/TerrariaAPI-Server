@@ -451,6 +451,8 @@ namespace TerrariaApi.Server
 						string name = String.IsNullOrWhiteSpace(currentClient.Name) ? "Unknown" : currentClient.Name;
 						Console.WriteLine($"Sync mods for {name}({currentClient.Socket.GetRemoteAddress()})...");
 						return false;
+					case PacketTypes.SendMod:
+						return false;
 				}
 			}
 

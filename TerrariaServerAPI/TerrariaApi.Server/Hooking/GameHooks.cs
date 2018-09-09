@@ -21,6 +21,8 @@ namespace TerrariaApi.Server.Hooking
 			Hooks.Game.PreInitialize = OnPreInitialize;
 			Hooks.Game.Started = OnStarted;
 			Hooks.World.Statue = OnStatue;
+
+			Hooks.Mod.PostInitialize = OnPostModInitialize;
 		}
 
 		static void OnPreUpdate(ref GameTime gameTime)
@@ -43,8 +45,13 @@ namespace TerrariaApi.Server.Hooking
 
 		static void OnPreInitialize()
 		{
-			HookManager.InitialiseAPI();
+			//HookManager.InitialiseAPI();
 			_hookManager.InvokeGameInitialize();
+		}
+
+		static void OnPostModInitialize(ref object threadContext)
+		{
+			HookManager.InitialiseAPI();
 		}
 
 		static void OnStarted()
