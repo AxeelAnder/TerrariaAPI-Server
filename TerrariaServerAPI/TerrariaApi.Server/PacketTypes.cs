@@ -126,6 +126,7 @@ public enum PacketTypes
 
 	#region Extension Packets
 	SyncModPlayer = 200,
+	SyncModItem = 201,
 	#endregion
 
 	#region tModLoader Packets
