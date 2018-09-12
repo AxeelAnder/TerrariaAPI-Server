@@ -46,12 +46,13 @@ namespace TerrariaApi.Server.Hooking
 		static void OnPreInitialize()
 		{
 			//HookManager.InitialiseAPI();
-			_hookManager.InvokeGameInitialize();
+			//_hookManager.InvokeGameInitialize();
 		}
 
 		static void OnPostModInitialize(ref object threadContext)
 		{
 			HookManager.InitialiseAPI();
+			_hookManager.InvokeGameInitialize();
 		}
 
 		static void OnStarted()
