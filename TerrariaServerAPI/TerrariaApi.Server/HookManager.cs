@@ -450,9 +450,9 @@ namespace TerrariaApi.Server
 						RemoteClient currentClient = Netplay.Clients[buffer.whoAmI];
 						string name = String.IsNullOrWhiteSpace(currentClient.Name) ? "Unknown" : currentClient.Name;
 						Console.WriteLine($"Sync mods for {name}({currentClient.Socket.GetRemoteAddress()})...");
-						return false;
+						break;
 					case PacketTypes.SendMod:
-						return false;
+						break;
 				}
 			}
 
