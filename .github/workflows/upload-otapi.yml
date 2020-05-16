@@ -25,4 +25,5 @@ jobs:
         run: |
           cd nuget
           nuget pack ./Mintaka.OTAPI.nuspec
-          Get-ChildItem -Path ./ -File -Include *.nupkg | nuget push "$_" ./${{secrets.NUGET_APIKEY}} -src https://api.nuget.org
+          Get-ChildItem -Path ./ -File -Include *.nupkg | nuget push "$_" ${{secrets.NUGET_APIKEY}} -Source https://api.nuget.org/v3/index.json
+
